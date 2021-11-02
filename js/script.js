@@ -5,7 +5,7 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro
 
-// 1. Far scegliere all'utente la difficoltà -> if
+// 1. Far scegliere all'utente la difficoltà -> while
     // 1.1 Deve scegliere tra 3 numeri, in base al numero scelto, decide la difficoltà
 
 // 2. Creare le funzioni per la creazione della griglia
@@ -18,3 +18,60 @@
     // 3.3 Difficoltà 3 = 7X7
 
 // 4. Generare numeri -> for
+
+const container = document.getElementById("container-grid");
+
+var numDiff = 0; 
+
+while ((numDiff < 1 ) || (numDiff > 3)) {
+    numDiff = parseInt(prompt("Scegli un numero: 1 - Facile / 2 - Intermedio / 3 - Difficile"));
+}
+
+if (numDiff === 1) {
+    
+    for (let i = 0; i < 100; i++) {
+
+        let newGrid = generetedGrid("div", "square1")
+        
+        container.append(newGrid);
+    }
+
+} else if (numDiff === 2) {
+    
+    for (let i = 0; i < 81; i++) {
+
+        let newGrid = generetedGrid("div", "square2")
+        
+        container.append(newGrid);
+    }
+} else if (numDiff === 3) {
+
+    for (let i = 0; i < 49; i++) {
+
+        let newGrid = generetedGrid("div", "square3")
+        
+        container.append(newGrid);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+// funzioni
+
+function generetedGrid(gridElement, gridClass) {
+    
+    let grid = document.createElement(gridElement);
+    grid.classList.add(gridClass);
+
+    return grid
+
+}
+
+

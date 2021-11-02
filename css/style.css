@@ -39,7 +39,7 @@ body {
     width: calc(100% / 9);
     height: calc(100% / 9);
     color: blue;
-    line-height: 94px;
+    line-height: 64px;
 }
 
 .square3 {

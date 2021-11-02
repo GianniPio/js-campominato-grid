@@ -27,8 +27,12 @@ while ((numDiff < 1 ) || (numDiff > 3)) {
     numDiff = parseInt(prompt("Scegli un numero: 1 - Facile / 2 - Intermedio / 3 - Difficile"));
 }
 
+
+
 if (numDiff === 1) {
     
+    alert("Hai scelto la difficoltà 'facile'");
+
     for (let i = 0; i < 100; i++) {
 
         let newGrid = generetedGrid("div", "square1");
@@ -44,11 +48,15 @@ if (numDiff === 1) {
             }
         
         )
+
+        
         
         container.append(newGrid);
     }
 
 } else if (numDiff === 2) {
+
+    alert("Hai scelto la difficoltà 'intermedia'");
     
     for (let i = 0; i < 81; i++) {
 
@@ -70,6 +78,8 @@ if (numDiff === 1) {
 
     }
 } else if (numDiff === 3) {
+
+    alert("Hai scelto la difficoltà 'difficile'");
 
     for (let i = 0; i < 49; i++) {
 

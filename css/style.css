@@ -20,8 +20,6 @@ body {
     text-align: center;
     width: 700px;
     height: 600px;
-    border: 3px solid white;
-    background-color: blue;
     display: flex;
     flex-wrap: wrap;
 }
@@ -31,6 +29,8 @@ body {
     background-color: blue;
     width: calc(100% / 10);
     height: calc(100% / 10);
+    color: blue;
+    line-height: 55px;
 }
 
 .square2 {
@@ -38,6 +38,8 @@ body {
     background-color: blue;
     width: calc(100% / 9);
     height: calc(100% / 9);
+    color: blue;
+    line-height: 94px;
 }
 
 .square3 {
@@ -45,5 +47,12 @@ body {
     background-color: blue;
     width: calc(100% / 7);
     height: calc(100% / 7);
+    color: blue;
+    line-height: 80px;
+}
+
+.square_click {
+    background-color: white;
+    border: 3px solid black;
 }
 

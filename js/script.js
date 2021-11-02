@@ -21,7 +21,7 @@
 
 const container = document.getElementById("container-grid");
 
-var numDiff = 0; 
+var numDiff = 0;
 
 while ((numDiff < 1 ) || (numDiff > 3)) {
     numDiff = parseInt(prompt("Scegli un numero: 1 - Facile / 2 - Intermedio / 3 - Difficile"));
@@ -31,7 +31,19 @@ if (numDiff === 1) {
     
     for (let i = 0; i < 100; i++) {
 
-        let newGrid = generetedGrid("div", "square1")
+        let newGrid = generetedGrid("div", "square1");
+
+        newGrid.append(i+1);
+
+        newGrid.addEventListener("click",
+        
+            function() {
+                
+                this.classList.add("square_click");
+
+            }
+        
+        )
         
         container.append(newGrid);
     }
@@ -40,21 +52,45 @@ if (numDiff === 1) {
     
     for (let i = 0; i < 81; i++) {
 
-        let newGrid = generetedGrid("div", "square2")
+        let newGrid = generetedGrid("div", "square2");
+
+        newGrid.append(i+1);
+
+        newGrid.addEventListener("click",
+        
+            function() {
+                
+                this.classList.add("square_click");
+
+            }
+        
+        )
         
         container.append(newGrid);
+
     }
 } else if (numDiff === 3) {
 
     for (let i = 0; i < 49; i++) {
 
-        let newGrid = generetedGrid("div", "square3")
+        let newGrid = generetedGrid("div", "square3");
+
+        newGrid.append(i+1);
+
+        newGrid.addEventListener("click",
+        
+            function() {
+                
+                this.classList.add("square_click");
+
+            }
+        
+        )
         
         container.append(newGrid);
     }
 
 }
-
 
 
 
@@ -70,8 +106,11 @@ function generetedGrid(gridElement, gridClass) {
     let grid = document.createElement(gridElement);
     grid.classList.add(gridClass);
 
+
     return grid
 
 }
+
+
 
 

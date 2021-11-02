@@ -24,30 +24,32 @@ body {
     flex-wrap: wrap;
 }
 
+#container-grid > div {
+    cursor: pointer;
+    color: blue;
+}
+
 .square1 {
-    border: 3px solid white;
     background-color: blue;
+    border: 3px solid white;
     width: calc(100% / 10);
     height: calc(100% / 10);
-    color: blue;
     line-height: 55px;
 }
 
 .square2 {
-    border: 3px solid white;
     background-color: blue;
+    border: 3px solid white;
     width: calc(100% / 9);
     height: calc(100% / 9);
-    color: blue;
     line-height: 64px;
 }
 
 .square3 {
-    border: 3px solid white;
     background-color: blue;
+    border: 3px solid white;
     width: calc(100% / 7);
     height: calc(100% / 7);
-    color: blue;
     line-height: 80px;
 }
 
@@ -55,4 +57,3 @@ body {
     background-color: white;
     border: 3px solid black;
 }
-

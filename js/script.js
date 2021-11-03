@@ -22,6 +22,10 @@
 const container = document.getElementById("container-grid");
 
 var numDiff = 0;
+const easy = 100;
+const medium = 81;
+const hard = 49;
+
 
 while ((numDiff < 1 ) || (numDiff > 3)) {
     numDiff = parseInt(prompt("Scegli un numero: 1 - Facile / 2 - Intermedio / 3 - Difficile"));
@@ -33,7 +37,7 @@ if (numDiff === 1) {
     
     alert("Hai scelto la difficoltà 'facile'");
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < easy; i++) {
 
         let newGrid = generetedGrid("div", "square1");
 
@@ -58,7 +62,7 @@ if (numDiff === 1) {
 
     alert("Hai scelto la difficoltà 'intermedia'");
     
-    for (let i = 0; i < 81; i++) {
+    for (let i = 0; i < medium; i++) {
 
         let newGrid = generetedGrid("div", "square2");
 
@@ -81,7 +85,7 @@ if (numDiff === 1) {
 
     alert("Hai scelto la difficoltà 'difficile'");
 
-    for (let i = 0; i < 49; i++) {
+    for (let i = 0; i < hard; i++) {
 
         let newGrid = generetedGrid("div", "square3");
 

@@ -39,13 +39,13 @@ if (numDiff === 1) {
 
     for (let i = 0; i < easy; i++) {
 
-        let newGrid = generetedGrid("div", "square1");
-
-        newGrid.append(i+1);
+        let newGrid = generetedElement("square1");
 
         newGrid.addEventListener("click",
         
             function() {
+
+                newGrid.innerHTML = `${i+1}`;
                 
                 this.classList.add("square_click");
 
@@ -64,13 +64,14 @@ if (numDiff === 1) {
     
     for (let i = 0; i < medium; i++) {
 
-        let newGrid = generetedGrid("div", "square2");
+        let newGrid = generetedElement("square2");
 
-        newGrid.append(i+1);
 
         newGrid.addEventListener("click",
         
             function() {
+
+                newGrid.innerHTML = `${i+1}`;
                 
                 this.classList.add("square_click");
 
@@ -87,14 +88,14 @@ if (numDiff === 1) {
 
     for (let i = 0; i < hard; i++) {
 
-        let newGrid = generetedGrid("div", "square3");
-
-        newGrid.append(i+1);
+        let newGrid = generetedElement("square3");
 
         newGrid.addEventListener("click",
         
             function() {
-                
+
+                newGrid.innerHTML = `${i+1}`;
+
                 this.classList.add("square_click");
 
             }
@@ -115,9 +116,9 @@ if (numDiff === 1) {
 
 // funzioni
 
-function generetedGrid(gridElement, gridClass) {
+function generetedElement(gridClass) {
     
-    let grid = document.createElement(gridElement);
+    let grid = document.createElement("div");
     grid.classList.add(gridClass);
 
 
